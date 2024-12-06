@@ -1,5 +1,5 @@
-# TODO: Подробно описать три произвольных класса
 import doctest
+
 
 class Person:
     def __init__(self, first_name: str, second_name: str, patronymic='', age=18):
@@ -48,7 +48,8 @@ class Person:
         if self.age < 0:
             raise ValueError("Возраст должен быть положительным числом")
         self.age = age
-        
+
+
 class Wallet:
     def __init__(self, salary: int, total=2000):
         """
@@ -108,6 +109,7 @@ class Wallet:
         """
         return self.total
 
+
 class Company:
     def __init__(self, name_company: str, employee: int):
         """
@@ -150,6 +152,7 @@ class Company:
         2500
         """
         print(self.employee)
+
 
 if __name__ == "__main__":
     doctest.testmod()  # тестирование примеров, которые находятся в документации
