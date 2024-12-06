@@ -2,7 +2,7 @@ import doctest
 
 
 class Person:
-    def __init__(self, first_name: str, second_name: str, patronymic='', age=18):
+    def __init__(self, first_name: str, second_name: str, patronymic="", age=18):
         """
         Создание и подготовка к работе объекта "Персона"
 
@@ -31,7 +31,7 @@ class Person:
 
         Примеры:
         >>> pers_1 = Person("Пушкин", "Александр", "Сергеевич", 20)
-        >>> pers_1.get_patronymic('')
+        >>> pers_1.get_patronymic("")
         """
         if not isinstance(patronymic, str):
             raise TypeError("Отчество должно быть типа str")
@@ -119,7 +119,7 @@ class Company:
         :param employee: Количество работников
 
         Примеры:
-        >>> comp = Company('Баскунчакская соль', 2500)  # инициализация экземпляра класса
+        >>> comp = Company("Баскунчакская соль", 2500)  # инициализация экземпляра класса
         """
         if not isinstance(name_company, str):
             raise TypeError("Название компании должно быть типа str")
@@ -136,7 +136,7 @@ class Company:
         Показывает название компании
 
         Примеры:
-        >>> comp = Company('Баскунчакская соль', 2500)  # инициализация экземпляра класса
+        >>> comp = Company("Баскунчакская соль", 2500)  # инициализация экземпляра класса
         >>> comp.show_name()
         Баскунчакская соль
         """
@@ -147,7 +147,7 @@ class Company:
         Показывает количество работников
 
         Примеры:
-        >>> comp = Company('Баскунчакская соль', 2500)  # инициализация экземпляра класса
+        >>> comp = Company("Баскунчакская соль", 2500)  # инициализация экземпляра класса
         >>> comp.show_employee()
         2500
         """
