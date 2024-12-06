@@ -127,8 +127,7 @@ class Company:
         if not isinstance(employee, int):
             raise TypeError("Количество работников должно быть типа int")
         if employee <= 0:
-            raise ValueError(
-                "Количество работников должно быть положительным числом")
+            raise ValueError("Количество работников должно быть положительным числом")
         self.employee = employee
 
     def show_name(self) -> None:
