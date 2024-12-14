@@ -51,7 +51,8 @@ if __name__ == "__main__":
     print(empty_library.get_next_book_id())
 
     list_books = [
-        Book(id_=book_dict["id"], name=book_dict["name"], pages=book_dict["pages"])
+        Book(id_=book_dict["id"], name=book_dict["name"],
+             pages=book_dict["pages"])
         for book_dict in BOOKS_DATABASE
     ]
     # инициализируем библиотеку с книгами
