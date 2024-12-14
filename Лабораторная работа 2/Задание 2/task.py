@@ -25,7 +25,6 @@ class Book:
         return f'Book(id_={self.id}, name=\'{self.name}\', pages={self.pages})'
 
 
-# TODO: написать класс Library
 class Library:
     def __init__(self, books=None):
         if books is None:
