@@ -7,6 +7,7 @@ class Person:
         name (str): Имя человека.
         age (int): Возраст человека.
     """
+
     def __init__(self, name: str, age: int):
         """
         Инициализация объекта класса Person.
@@ -52,6 +53,7 @@ class Wallet(Person):
     Атрибуты:
         balance (float): Баланс кошелька.
     """
+
     def __init__(self, name: str, age: int, balance: float = 0.0):
         """
         Инициализация объекта класса Wallet.
@@ -111,6 +113,7 @@ class Company(Person):
         company_name (str): Название компании.
         employee_count (int): Количество сотрудников.
     """
+
     def __init__(self, name: str, age: int, company_name: str, employee_count: int):
         """
         Инициализация объекта класса Company.
@@ -124,9 +127,11 @@ class Company(Person):
         if not isinstance(company_name, str):
             raise TypeError("Название компании должно быть строкой")
         if not isinstance(employee_count, int) or employee_count < 0:
-            raise ValueError("Количество сотрудников должно быть неотрицательным числом")
+            raise ValueError(
+                "Количество сотрудников должно быть неотрицательным числом")
         self.company_name = company_name
-        self.__employee_count = employee_count  # Закрытый атрибут для защиты данных компании
+        # Закрытый атрибут для защиты данных компании
+        self.__employee_count = employee_count
 
     def __str__(self) -> str:
         """
@@ -143,7 +148,8 @@ class Company(Person):
         :param count: Количество новых сотрудников.
         """
         if count <= 0:
-            raise ValueError("Количество сотрудников для найма должно быть положительным")
+            raise ValueError(
+                "Количество сотрудников для найма должно быть положительным")
         self.__employee_count += count
 
     def fire_employees(self, count: int) -> None:
